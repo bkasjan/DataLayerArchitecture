@@ -18,6 +18,7 @@ namespace TableDataGateway
             var table = productGateway.GetByName("Water");
             var success = productGateway.DeleteById(2);
 
+
             foreach (DataRow row in table.Rows)
             {
                 Console.WriteLine($"{row["ID"]} {row["name"]}");
