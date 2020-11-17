@@ -5,3 +5,11 @@
 /SoftwareArchitecture.Data/obj
 /TableDataGateway/obj
 /.vs
+/ActiveRecord/bin/Debug/netcoreapp3.1
+/ActiveRecord/obj
+/RowDataGateway/obj
+/TableDataGateway/bin/Debug/netcoreapp2.1
+/RowDataGateway/bin/Debug/netcoreapp2.1
+/DataMapper/bin/Debug/netcoreapp2.1
+/DataMapper/obj
+/SoftwareArchitecture.Data/bin/Debug/netcoreapp2.1

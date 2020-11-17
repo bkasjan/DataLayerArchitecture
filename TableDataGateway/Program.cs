@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
-using TableDataGateway.Gateways;
+using SoftwareArchitecture.Data.Data;
+using TableDataGateway.GatewaysOrm;
+using TableDataGateway.GatewaysSql;
 
 namespace TableDataGateway
 {
@@ -14,10 +16,10 @@ namespace TableDataGateway
 
         static void Main(string[] args)
         {
+            // No ORM or Mapper for DTO example
             var productGateway = new ProductGateway(ConnectionString);
-            var table = productGateway.GetByName("Water");
+            var table = productGateway.GetById(1);
             var success = productGateway.DeleteById(2);
-
 
             foreach (DataRow row in table.Rows)
             {
@@ -25,6 +27,12 @@ namespace TableDataGateway
             }
 
             Console.WriteLine($"Is row deleted: {success}");
+
+            // With ORM
+            var customerGateway = new CustomerGateway(new DemoContext());
+            var customer = customerGateway.SelectById(1);
+
+            Console.WriteLine($"Customer last name: {customer.LastName}");
         }
     }
 }
