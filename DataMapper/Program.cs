@@ -14,18 +14,20 @@ namespace DataMapper
 
         static void Main(string[] args)
         {
-            var productMapper = new ProductDataMapper(ConnectionString);
+            var productMapper = 
+                new ProductDataMapper(ConnectionString);
 
-            var product = productMapper.Create(new Product
-            {
-                Name = "Product 10", 
-                Price = 8.99
-            }).Result;
+            var product = productMapper
+                .Create(new Product
+                {
+                    Name = "Product 10", 
+                    Price = 8.99
+                }).Result;
 
+            var product2 = productMapper
+                .GetById(1).Result;
 
             Console.WriteLine($"Product name: {product.Name}");
-
-            var product2 = productMapper.GetById(1).Result;
             Console.WriteLine($"Product 2 name: {product2.Name}");
         }
     }

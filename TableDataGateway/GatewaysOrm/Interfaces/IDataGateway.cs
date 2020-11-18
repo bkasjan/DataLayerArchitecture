@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace TableDataGateway.Gateways
+namespace TableDataGateway.GatewaysOrm.Interfaces
 {
     interface IDataGateway<T> where T : class
     {

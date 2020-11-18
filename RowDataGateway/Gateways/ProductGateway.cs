@@ -12,13 +12,9 @@ namespace RowDataGateway.Gateways
     public class ProductGateway : IProductGateway
     {
         public int Id { get; set; }
-
         public string Name { get; set; }
-
         public double Price { get; set; }
-
         public int? OrderId { get; set; }
-
         private readonly string _connectionString;
 
         public ProductGateway(string connectionString)

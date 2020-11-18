@@ -16,19 +16,19 @@ namespace TableDataGateway
 
         static void Main(string[] args)
         {
-            // No ORM or Mapper for DTO example
+            // Usage - no ORM or Mapper for DTO example
             var productGateway = new ProductGateway(ConnectionString);
-            var table = productGateway.GetById(1);
+            var product = productGateway.GetById(1);
             var success = productGateway.DeleteById(2);
 
-            foreach (DataRow row in table.Rows)
+            foreach (DataRow row in product.Rows)
             {
                 Console.WriteLine($"{row["ID"]} {row["name"]}");
             }
 
             Console.WriteLine($"Is row deleted: {success}");
 
-            // With ORM
+            // Usage - with ORM
             var customerGateway = new CustomerGateway(new DemoContext());
             var customer = customerGateway.SelectById(1);
 

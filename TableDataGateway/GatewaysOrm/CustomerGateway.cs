@@ -2,7 +2,7 @@
 using System.Linq;
 using SoftwareArchitecture.Data.Data;
 using SoftwareArchitecture.Data.Models;
-using TableDataGateway.Gateways;
+using TableDataGateway.GatewaysOrm.Interfaces;
 
 namespace TableDataGateway.GatewaysOrm
 {
